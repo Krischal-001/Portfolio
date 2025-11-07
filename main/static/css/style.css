@@ -1,0 +1,91 @@
+/* ==== Global Body Styling ==== */
+body.bg_clr {
+  padding-top: 70px;
+  background: radial-gradient(circle at top left, #243b55, #141e30); /* new elegant glowing gradient */
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ==== Navbar Brand Animation ==== */
+.navbar-brand .animated-text {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1.7rem;
+  color: #00bcd4;
+  text-shadow: 1px 1px 3px #000;
+  overflow: hidden;
+  border-right: 2px solid #00bcd4;
+  white-space: nowrap;
+  animation: typing 2s steps(8, end) forwards,
+             blink 0.7s step-end infinite alternate;
+}
+
+@keyframes typing {
+  0% { width: 0; }
+  100% { width: 8ch; }
+}
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* ==== Navbar Link Styles ==== */
+.navbar-nav .nav-link {
+  color: #fff;
+  font-weight: 500;
+  text-shadow: 0.5px 0.5px 1px #000;
+  margin-left: 20px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #00bcd4;
+  transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #00bcd4;
+  text-shadow: 1px 1px 3px #111;
+  transform: scale(1.05);
+}
+
+/* ==== Icon Styling ==== */
+i {
+  color: #00bcd4;
+  transition: transform 0.3s ease, color 0.3s ease;
+  
+}
+
+i:hover {
+  transform: scale(1.2);
+  color: #26d0ce;
+}
+
+/* ==== Optional: Navbar Background ==== */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* ==== Responsive Tweaks ==== */
+@media (max-width: 991px) {
+  .navbar-nav .nav-link {
+    margin-left: 0;
+  }
+  body.bg_clr {
+    padding-top: 90px;
+  }
+}

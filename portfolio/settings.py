@@ -122,3 +122,22 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+MEDIA_URL = '/media/'     
+""" 
+In Django, MEDIA_URL and MEDIA_ROOT are settings you define for user-uploaded files, like project images or profile pictures.
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
+
+MEDIA_URL → the URL path you use in templates: /media/myphoto.png
+
+MEDIA_ROOT → the folder on your computer where files are stored
+"""
+MEDIA_ROOT = BASE_DIR / 'media'
+
+STATIC_URL = '/static/'
+
