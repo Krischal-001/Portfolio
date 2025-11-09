@@ -1,16 +1,20 @@
 {% load static %}
-<section id="home" class="hero"> 
+<section id="home" class="hero text-light"> 
   <div class="container text-center">
-    <img src="{% static 'images/my_image.jpg' %}" alt="my-photo" class="hero-img" />
-    <h1>Hi, I'm Krischal 👋</h1>
-    <h2 class="subtitle">Full Stack Developer</h2>
-    <p class="subtitle">I build web apps using Django, React, and more.</p>
+    <img src="{% static 'images/my_image.jpg' %}" 
+         alt="my-photo" 
+         class="hero-img rounded-circle img-fluid mb-3" />
+    <h1 class="hero-title mb-2">Hi, I'm Krischal 👋</h1>
+    <h2 class="hero-subtitle mb-3">Full Stack Developer</h2>
+    <p class="hero-description mb-4">
+      I build web apps using Django, React, and more. Passionate about creating responsive and interactive web experiences.
+    </p>
     <div class="hero-buttons">
-      <a href="{% static 'resume/Krischal_Resume.pdf' %}" class="btn btn-primary me-2" download>
+      <a href="{% static 'resume/Krischal_Resume.pdf' %}" 
+         class="btn btn-primary me-2" download>
         Download Resume
       </a>
-      <a href="#contact" class="btn btn-outline-light">Say Hi</a>
+      <a href="{% url 'contact' %}" class="btn btn-outline-light">Say Hi</a>
     </div>
   </div>
 </section>
-  

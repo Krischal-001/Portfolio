@@ -1,35 +1,34 @@
 {% load static %}
-{% comment %} Base template for portfolio site using Bootstrap {% endcomment %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{% block title %}Krischal |  Portfolio {% endblock %}</title>
-
+    <title>{% block title %}Krischal | Portfolio{% endblock %}</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-    <!-- Bootstrap Icons -->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-papfJ7Xl6ZdT1mI3G4U3W7oDKZDx+tP7M+5UQld0Db+ZFT3Z8h7h4t+4zv+7lA8LVG7xMxZp/7+uwpOxj0b+DQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
-  </head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
+  </head>
   <body class="bg_clr">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top bg_clr shadow-sm">
-      <div
-        class="container-fluid d-flex justify-content-between align-items-center px-4"
-      >
-        <!-- Left Logo -->
-        <a class="navbar-brand text_clr fw-bold fs-3" href="#">
-          <span class="animated-text"> Krish 🔥 </span>
+      <div class="container-fluid d-flex justify-content-between align-items-center px-4">
+        <!-- Navbar Brand -->
+        <a class="navbar-brand text_clr fw-bold fs-3" href="{% url 'home' %}">
+          <span class="animated-text">Krish 🔥</span>
         </a>
 
-        <!-- Toggler for mobile -->
+        <!-- Mobile Toggler -->
         <button
           class="navbar-toggler border-0"
           type="button"
@@ -42,63 +41,44 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- Navbar Content -->
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarSupportedContent"
-        >
-          <ul
-            class="navbar-nav d-flex align-items-center gap-4 text-center"
-          >
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+          <ul class="navbar-nav d-flex align-items-center gap-4 text-center">
             <li class="nav-item">
-              <a class="nav-link" href="#home">
+              <a class="nav-link" href="{% url 'home' %}#home">
                 <i class="bi bi-house-fill me-1"></i> Home
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#about">
+              <a class="nav-link" href="{% url 'about' %}">
                 <i class="bi bi-person-fill me-1"></i> About
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#projects">
+              <a class="nav-link" href="{% url 'home' %}#projects">
                 <i class="bi bi-grid-3x3-gap-fill me-1"></i> Projects
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contact">
+              <a class="nav-link" href="{% url 'contact' %}">
                 <i class="bi bi-envelope-fill me-1"></i> Contact Us
               </a>
             </li>
-<li class="nav-item">
-  <a class="nav-link" href="{% static 'resume/Krischal_Resume.pdf' %}" download>
-    <i class="bi bi-file-earmark-text-fill me-1"></i> Resume
-  </a>
-</li>
-
-
+            <li class="nav-item">
+              <a class="nav-link" href="{% static 'resume/Krischal_Resume.pdf' %}" download>
+                <i class="bi bi-file-earmark-text-fill me-1"></i> Resume
+              </a>
+            </li>
             <!-- Social Icons -->
             <li class="nav-item d-flex align-items-center gap-3 ms-3">
-              <a
-                href="https://wa.me/9808070234"
-                target="_blank"
-                class="nav-link p-0 social-icon"
-              >
+              <a href="https://wa.me/9779808070234" target="_blank" class="nav-link p-0 social-icon">
                 <i class="bi bi-whatsapp text-success fs-3"></i>
               </a>
-              <a
-                href="https://github.com/Krischal-001"
-                target="_blank"
-                class="nav-link p-0 social-icon"
-              >
+              <a href="https://github.com/Krischal-001" target="_blank" class="nav-link p-0 social-icon">
                 <i class="bi bi-github text-dark fs-3"></i>
               </a>
-              <a
-                href="https://www.linkedin.com/feed/"
-                target="_blank"
-                class="nav-link p-0 social-icon "
-              >
-                <i class="bi bi-linkedin text-primary  fs-3"></i>
+              <a href="https://www.linkedin.com/feed/" target="_blank" class="nav-link p-0 social-icon">
+                <i class="bi bi-linkedin text-primary fs-3"></i>
               </a>
             </li>
           </ul>
@@ -106,11 +86,9 @@
       </div>
     </nav>
 
-    <!-- Main Content Block -->
+    <!-- Main Content -->
     <main class="mt-5 pt-5">
-      {% block content %}
-      <!-- Child templates will inject content here -->
-      {% endblock content %}
+      {% block content %}{% endblock %}
     </main>
 
     <!-- Bootstrap JS -->

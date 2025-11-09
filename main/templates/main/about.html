@@ -1,0 +1,347 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}About | Krischal Portfolio{% endblock %}
+
+{% block content %}
+<!-- About Hero Section -->
+<section id="about-hero" class="container my-5">
+  <div class="glow-border p-4 rounded d-flex flex-wrap align-items-center justify-content-center">
+    
+    <!-- Image Section -->
+    <div class="col-md-4 text-center mb-4 mb-md-0 ">
+      <div class="glow-box p-4 hero-glow-box">
+        <img src="{% static 'images/profile.jpg' %}" alt="Krischal" class="img-fluid rounded hero-img">
+      </div>
+    </div>
+
+    <!-- Text + Buttons Section -->
+    <div class="col-md-7 text-center text-md-start">
+      <h1 class="hero-title">Hello, I am <span class="text-primary">Krischal</span></h1>
+      <p class="hero-description">
+        I’m a passionate web developer and programmer who loves building creative projects that combine
+        logic, design, and functionality. From crafting sleek websites to experimenting with new
+        technologies, I enjoy every step of the journey. I thrive on challenges, learning continuously, 
+        and making a positive impact with code.
+      </p>
+
+      <!-- Buttons with icons -->
+      <div class="hero-buttons row mt-4 g-3">
+        <div class="col-md-4">
+          <a href="#skills" class="btn btn-primary w-100">
+            <i class="bi bi-tools me-1"></i> Skills
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="#certifications" class="btn btn-success w-100">
+            <i class="bi bi-award me-1"></i> Certifications
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="#hobbies" class="btn btn-warning w-100">
+            <i class="bi bi-heart me-1"></i> Hobbies
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+{% comment %} Gallery Section {% endcomment %}
+<!-- Gallery Heading -->
+<h1 class="gallery-title text-center">📸 My  Image Gallery</h1>
+
+<section class="gallery-section">
+  <!-- Image 1 -->
+  <div class="photo-frame">
+    <img src="{% static 'images/image_01.jpg' %}" alt="Photo 1" class="main-image">
+    <p>💻 My First Programming Project</p>
+  </div>
+
+  <!-- Image 2 -->
+  <div class="photo-frame">
+    <img src="{% static 'images/image_02.jpg' %}" alt="Photo 2" class="main-image">
+    <p>🎉 Coding Isn’t Enough Sometimes, Enjoy!</p>
+  </div>
+
+  <!-- Image 3 -->
+  <div class="photo-frame">
+    <img src="{% static 'images/image_03.jpg' %}" alt="Photo 3">
+    <p>🚀 Reaching New Heights</p>
+  </div>
+
+  <!-- Image 4 -->
+  <div class="photo-frame">
+    <img src="{% static 'images/image_04.jpg' %}" alt="Photo 4">
+    <p>🌟 Creative Sparks Fly</p>
+  </div>
+
+  <!-- Image 5 -->
+  <div class="photo-frame">
+    <img src="{% static 'images/image_05.jpg' %}" alt="Photo 5">
+    <p>🔥 Passion in Motion</p>
+  </div>
+
+  <!-- Image 6 -->
+  <div class="photo-frame">
+    <img src="{% static 'images/image_06.jpg' %}" alt="Photo 6">
+    <p>🌿 Nature Inspires Me</p>
+  </div>
+</section>
+
+
+<!-- Skills Section -->
+<section id="skills" class="container my-5">
+  <h2 class="text-center mb-5">My Skills</h2>
+
+  <!-- Frontend -->
+  <div class="skill-topic mb-5">
+    <h3 class="topic-title">Frontend Development</h3>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="skill-card">
+          <i class="bi bi-code-slash fs-1"></i>
+          <h5>HTML & CSS</h5>
+          <p>Create responsive, modern websites with clean code.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="skill-card">
+          <i class="bi bi-bootstrap fs-1"></i>
+          <h5>Bootstrap</h5>
+          <p>Fast, responsive UI design with ready-to-use components.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="skill-card">
+          <i class="bi bi-droplet fs-1"></i>
+          <h5>Tailwind CSS</h5>
+          <p>Modern utility-first styling for efficient layouts.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Frontend Framework -->
+  <div class="skill-topic mb-5 ">
+    <h3 class="topic-title">Frontend Framework</h3>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="skill-card">
+          <i class="bi bi-ui-checks-grid fs-1"></i>
+          <h5>React</h5>
+          <p>Build interactive, reusable UI components easily.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="skill-card">
+          <i class="bi bi-file-code fs-1"></i>
+          <h5>JavaScript</h5>
+          <p>Dynamic web functionality and interactivity.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="skill-card">
+          <i class="bi bi-code fs-1"></i>
+          <h5>Web Animations</h5>
+          <p>Adding smooth animations to improve UX.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Backend -->
+  <div class="skill-topic mb-5">
+    <h3 class="topic-title">Backend Development</h3>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="skill-card">
+          <i class="bi bi-code-slash fs-1"></i>
+          <h5>Python</h5>
+          <p>Flexible, readable code for backend logic.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="skill-card">
+          <i class="bi bi-file-code fs-1"></i>
+          <h5>Django</h5>
+          <p>Robust backend framework with ORM and templates.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="skill-card">
+          <i class="bi bi-server fs-1"></i>
+          <h5>APIs</h5>
+          <p>RESTful APIs for frontend-backend communication.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tools -->
+  <div class="skill-topic mb-5">
+    <h3 class="topic-title">Tools</h3>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="skill-card">
+          <i class="bi bi-github fs-1"></i>
+          <h5>Git/GitHub</h5>
+          <p>Version control and collaborative development.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="skill-card">
+          <i class="bi bi-file-earmark-code fs-1"></i>
+          <h5>VS Code</h5>
+          <p>Powerful IDE for fast coding and debugging.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="skill-card">
+          <i class="bi bi-box-arrow-in-right fs-1"></i>
+          <h5>Postman</h5>
+          <p>Testing and debugging APIs efficiently.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Databases -->
+  <div class="skill-topic mb-5">
+    <h3 class="topic-title">Databases</h3>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="skill-card">
+          <i class="bi bi-database fs-1"></i>
+          <h5>MySQL</h5>
+          <p>Structured relational database management.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="skill-card">
+          <i class="bi bi-stack fs-1"></i>
+          <h5>MongoDB</h5>
+          <p>NoSQL database for flexible data storage.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="skill-card">
+          <i class="bi bi-server fs-1"></i>
+          <h5>PostgreSQL</h5>
+          <p>Advanced relational database with performance.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Certifications Section -->
+<section id="certifications" class="container my-5">
+  <h2 class="text-center mb-4">Certifications</h2>
+  
+  <!-- Coming Soon Message -->
+  <div class="text-center my-5">
+    <i class="bi bi-hourglass-split fs-1 mb-3"></i>
+    <h4 class="text-white">Coming Soon!</h4>
+    <p class="text-muted">All certifications will be updated here shortly.</p>
+  </div>
+
+  <!-- Optional placeholder cards (can keep them or remove until actual certificates) -->
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <div class="card bg-dark text-white p-3 text-center opacity-50">
+        <i class="bi bi-award fs-1 mb-2"></i>
+        <h5>Web Development Certificate</h5>
+        <p>Issued by XYZ Academy</p>
+      </div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <div class="card bg-dark text-white p-3 text-center opacity-50">
+        <i class="bi bi-award fs-1 mb-2"></i>
+        <h5>Python Programming Certificate</h5>
+        <p>Issued by ABC Institute</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Hobbies Section -->
+<section id="hobbies" class="container my-5">
+  <h2 class="text-center mb-5">Hobbies</h2>
+  <div class="row g-4 justify-content-center text-center">
+
+    <!-- Hobby 1: Acoustic Guitar -->
+    <div class="col-md-4 hobby-card animate__animated animate__fadeInUp">
+      <i class="bi bi-music-note-beamed fs-1 mb-3"></i>
+      <h5>Acoustic Guitar</h5>
+      <p>Strumming tunes and enjoying self-vibes through music.</p>
+    </div>
+
+    <!-- Hobby 2: Reading -->
+    <div class="col-md-4 hobby-card animate__animated animate__fadeInUp animate__delay-1s">
+      <i class="bi bi-book-half fs-1 mb-3"></i>
+      <h5>Reading</h5>
+      <p>Diving into finance, personal growth, and engaging novels.</p>
+    </div>
+
+    <!-- Hobby 3: Basketball -->
+    <div class="col-md-4 hobby-card animate__animated animate__fadeInUp animate__delay-2s">
+      <i class="bi bi-basket fs-1 mb-3"></i>
+      <h5>Basketball</h5>
+      <p>Active senior-college tournament player, team spirit & fitness.</p>
+    </div>
+
+    <!-- Hobby 4: Traveling -->
+    <div class="col-md-4 hobby-card animate__animated animate__fadeInUp">
+      <i class="bi bi-geo-alt fs-1 mb-3"></i>
+      <h5>Traveling</h5>
+      <p>Exploring new places, cultures, and experiences.</p>
+    </div>
+
+    <!-- Hobby 5: Photography -->
+    <div class="col-md-4 hobby-card animate__animated animate__fadeInUp animate__delay-1s">
+      <i class="bi bi-camera fs-1 mb-3"></i>
+      <h5>Photography</h5>
+      <p>Capturing memories, landscapes, and candid moments.</p>
+    </div>
+
+    <!-- Hobby 6: Design & Art -->
+    <div class="col-md-4 hobby-card animate__animated animate__fadeInUp animate__delay-2s">
+      <i class="bi bi-palette fs-1 mb-3"></i>
+      <h5>Design & Art</h5>
+      <p>Sketching, designing, and exploring creative visual ideas.</p>
+    </div>
+
+    <!-- Hobby 7: Gaming -->
+    <div class="col-md-4 hobby-card animate__animated animate__fadeInUp">
+      <i class="bi bi-controller fs-1 mb-3"></i>
+      <h5>Gaming</h5>
+      <p>Relaxing and sharpening strategic thinking through games.</p>
+    </div>
+
+    <!-- Hobby 8: Self Growth & Fun -->
+    <div class="col-md-4 hobby-card animate__animated animate__fadeInUp animate__delay-1s">
+      <i class="bi bi-emoji-smile fs-1 mb-3"></i>
+      <h5>Self Growth & Fun</h5>
+      <p>Learning new skills, enjoying hobbies, and living fully.</p>
+    </div>
+
+    <!-- Hobby 9: Music & Jam -->
+    <div class="col-md-4 hobby-card animate__animated animate__fadeInUp animate__delay-2s">
+      <i class="bi bi-mic fs-1 mb-3"></i>
+      <h5>Jamming & Music</h5>
+      <p>Creating vibes, singing along, and having fun with music.</p>
+    </div>
+
+  </div>
+
+  <!-- Animated Inspiring Line -->
+  <div class="text-center mt-5">
+    <h4 class="animate__animated animate__pulse animate__infinite fw-bold">
+      🎉 Live your life to the fullest! 🎉
+    </h4>
+  </div>
+</section>
+
+
+{% endblock %}
