@@ -1,0 +1,82 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}Projects | My Portfolio{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero" id="projects">
+    <div class="container hero-content">
+        <h1 class="hero-title">My Projects</h1>
+        <p class="hero-subtitle">A showcase of my work across different fields</p>
+        <div class="hero-description">
+            Explore web, AI, mobile, and other technology projects below.  
+            Click on a project to learn more!
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section class="projects-section container">
+    <div class="section-header text-center">
+        <h2>Featured Projects</h2>
+        <p>Various projects spanning different technologies and domains</p>
+    </div>
+
+    <div class="projects-grid">
+        <!-- Example Project Card -->
+        <div class="project-card">
+            <div class="project-img-wrapper">
+                <img src="{% static 'main/images/project1.png' %}" alt="Web Project" class="project-img">
+            </div>
+            <h3 class="project-title">Portfolio Website</h3>
+            <p class="project-tech">HTML, CSS, JavaScript</p>
+            <p class="project-description">A responsive personal portfolio website showcasing my skills and projects.</p>
+        </div>
+
+        <div class="project-card">
+            <div class="project-img-wrapper">
+                <img src="{% static 'main/images/project2.png' %}" alt="AI Project" class="project-img">
+            </div>
+            <h3 class="project-title">AI Chatbot</h3>
+            <p class="project-tech">Python, TensorFlow</p>
+            <p class="project-description">An AI-powered chatbot capable of answering questions in real-time.</p>
+        </div>
+
+        <div class="project-card">
+            <div class="project-img-wrapper">
+                <img src="{% static 'main/images/project3.png' %}" alt="Mobile Project" class="project-img">
+            </div>
+            <h3 class="project-title">Mobile App</h3>
+            <p class="project-tech">Flutter, Dart</p>
+            <p class="project-description">A cross-platform mobile app for task management and productivity tracking.</p>
+        </div>
+
+        <div class="project-card">
+            <div class="project-img-wrapper">
+                <img src="{% static 'main/images/project4.png' %}" alt="Data Project" class="project-img">
+            </div>
+            <h3 class="project-title">Data Visualization Dashboard</h3>
+            <p class="project-tech">Python, Plotly, Pandas</p>
+            <p class="project-description">Interactive dashboards visualizing complex datasets for actionable insights.</p>
+        </div>
+
+        <div class="project-card">
+            <div class="project-img-wrapper">
+                <img src="{% static 'main/images/project5.png' %}" alt="Game Project" class="project-img">
+            </div>
+            <h3 class="project-title">2D Platformer Game</h3>
+            <p class="project-tech">Unity, C#</p>
+            <p class="project-description">A fun and engaging 2D platformer game developed with Unity engine.</p>
+        </div>
+
+        <div class="project-card">
+            <div class="project-img-wrapper">
+                <img src="{% static 'main/images/project6.png' %}" alt="Backend Project" class="project-img">
+            </div>
+            <h3 class="project-title">API Backend</h3>
+            <p class="project-tech">Django REST Framework</p>
+            <p class="project-description">A RESTful API backend powering a multi-client web application.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

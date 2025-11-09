@@ -3,11 +3,13 @@
   <div class="container text-center">
     <img src="{% static 'images/my_image.jpg' %}" 
          alt="my-photo" 
-         class="hero-img rounded-circle img-fluid mb-3" />
+         class="hero-img mb-3" />
+
     <h1 class="hero-title mb-2">Hi, I'm Krischal 👋</h1>
     <h2 class="hero-subtitle mb-3">Full Stack Developer</h2>
     <p class="hero-description mb-4">
-      I build web apps using Django, React, and more. Passionate about creating responsive and interactive web experiences.
+      I build web apps using Django, React, and more. Passionate about creating responsive and interactive web experiences. 
+      <a href="{% url 'about' %}" class="text-primary fw-bold">Learn More about me</a>
     </p>
     <div class="hero-buttons">
       <a href="{% static 'resume/Krischal_Resume.pdf' %}" 

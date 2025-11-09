@@ -1,4 +1,6 @@
 {% extends 'main/base.html' %}
+{% include 'partials/section_footer.html' %}
+
 {% load static %}
 {% block title %}About | Krischal Portfolio{% endblock %}
 
@@ -8,11 +10,14 @@
   <div class="glow-border p-4 rounded d-flex flex-wrap align-items-center justify-content-center">
     
     <!-- Image Section -->
-    <div class="col-md-4 text-center mb-4 mb-md-0 ">
-      <div class="glow-box p-4 hero-glow-box">
-        <img src="{% static 'images/profile.jpg' %}" alt="Krischal" class="img-fluid rounded hero-img">
-      </div>
-    </div>
+ <div class="col-md-4 text-center mb-4 mb-md-0">
+  <div class="glow-box p-4 hero-glow-box">
+    <img src="{% static 'images/profile.jpg' %}" 
+         alt="Krischal" 
+         class="img-fluid rounded about-img">
+  </div>
+</div>
+
 
     <!-- Text + Buttons Section -->
     <div class="col-md-7 text-center text-md-start">
@@ -342,6 +347,7 @@
     </h4>
   </div>
 </section>
+
 
 
 {% endblock %}
